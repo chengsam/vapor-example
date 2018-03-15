@@ -17,13 +17,6 @@ extension Droplet {
         get("info") { req in
             return req.description
         }
-      
-      get("/name", ":name") { request in
-        if let name = request.parameters["name"]?.string {
-          return "Hello \(name)!"
-        }
-        return "Error retrieving parameters."
-      }
 
         get("description") { req in return req.description }
         
