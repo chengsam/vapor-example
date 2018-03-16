@@ -49,6 +49,14 @@ extension Droplet {
       return "Hello"
     }
     
+    post("post") { req in
+      if let name = req.data["name"]?.string {
+        return "Hello \(name)!"
+      }
+      
+      return "Hello"
+    }
+    
     get() { _ in
       return "Main"
     }
